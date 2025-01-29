@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <header className="border-b">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-end">
           <ConnectWalletButton />
         </div>
       </header>

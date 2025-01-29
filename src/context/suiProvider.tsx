@@ -11,15 +11,10 @@ import { FC, ReactNode } from "react";
 interface SuiProviderProps {
   children: ReactNode;
 }
-
-// const { networkConfig } = createNetworkConfig({
-//   localnet: {
-//     url: process.env.NEXT_PUBLIC_SUI_NODE_URL || getFullnodeUrl("mainnet"),
-//   },
-//   mainnet: { url: getFullnodeUrl("mainnet") },
-// });
 const { networkConfig } = createNetworkConfig({
-  localnet: { url: getFullnodeUrl("localnet") },
+  localnet: {
+    url: process.env.NEXT_PUBLIC_SUI_NODE_URL || getFullnodeUrl("mainnet"),
+  },
   mainnet: { url: getFullnodeUrl("mainnet") },
 });
 const queryClient = new QueryClient();
