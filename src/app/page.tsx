@@ -1,13 +1,15 @@
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import TransactionsTable from "@/components/transactionsTable";
-import { ConnectWalletButton } from "@/components/connectWalletButton";
+import { ConnectWalletButton } from "@/components/head/connectWalletButton";
+import { Logo } from "@/components/head/logo";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <header className="border-b">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-end">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <Logo />
           <ConnectWalletButton />
         </div>
       </header>
