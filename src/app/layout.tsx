@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import SuiProvider from "@/context/suiProvider";
 import "@mysten/dapp-kit/dist/index.css";
+import ApolloProviderComp from "@/context/apolloProviderComp";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SuiProvider>
-        <body className={inter.variable}>{children}</body>
+        <ApolloProviderComp>
+          <body className={inter.variable}>{children}</body>
+        </ApolloProviderComp>
       </SuiProvider>
     </html>
   );
