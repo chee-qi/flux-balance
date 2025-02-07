@@ -1,10 +1,18 @@
+"use client";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import TransactionsTable from "@/components/transactionsTable";
 import { ConnectWalletButton } from "@/components/head/connectWalletButton";
 import { Logo } from "@/components/head/logo";
+import { useSuiBalance } from "@/hooks/useSuiBalance";
+// import { useAccounts } from "@mysten/dapp-kit";
 
 export default function Home() {
+  // const account = useAccounts();
+  const data = useSuiBalance(
+    "0xf385e34ddfdb51c28524978d89bd795594a1069581498b904e8ca9d0d2b09b84"
+  );
+  console.log("当前SUI余额:", data);
   return (
     <div className="min-h-screen bg-white">
       <header className="border-b">
